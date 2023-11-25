@@ -3,13 +3,18 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace BillingItemsGenerator.Parsers
+namespace BillingItemsGenerator.Services
 {
-    public static class ActiveListParser
+    public interface IActivityListService
     {
-        public static ActiveList Parse(string name, Stream activeListBlob)
+        ActiveList Parse(string name, Stream activeListBlob);
+    }
+
+    public class ActivityListService : IActivityListService
+    {
+        public ActiveList Parse(string name, Stream activeListBlob)
         {
-            using(StreamReader reader = new StreamReader(activeListBlob))
+            using (StreamReader reader = new StreamReader(activeListBlob))
             {
                 var dataLines = reader.ReadToEnd();
                 var fileParts = name.Split(new char[] { '_' });

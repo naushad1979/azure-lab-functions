@@ -3,9 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace BillingItemsGenerator
+namespace BillingItemsGenerator.Services
 {
-    public class BillingItemsGenerator
+    public interface IBillingItemsService
+    {
+        List<BillingItem> Generate(ActiveList activeList, PriceList priceList);
+    }
+    public class BillingItemsService: IBillingItemsService
     {
         public List<BillingItem> Generate(ActiveList activeList, PriceList priceList)
         {
