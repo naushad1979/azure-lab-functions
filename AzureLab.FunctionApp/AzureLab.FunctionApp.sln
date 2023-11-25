@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Telematics", "Telematics", "{614ADB08-7E52-409F-B4B4-D6822FC1BCAC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Billing", "Billing", "{7AAF7C15-7515-4A09-8636-313748C1B578}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillingItemsGenerator", "Billing\BillingItemsGenerator\BillingItemsGenerator.csproj", "{AA31623C-73B4-4979-AB2E-9A41B7CC436F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingItemsGenerator", "BillingItemsGenerator\BillingItemsGenerator.csproj", "{AA31623C-73B4-4979-AB2E-9A41B7CC436F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,9 +18,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{AA31623C-73B4-4979-AB2E-9A41B7CC436F} = {7AAF7C15-7515-4A09-8636-313748C1B578}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CF0B9C95-F863-49DB-8F9B-C3545E76884B}
