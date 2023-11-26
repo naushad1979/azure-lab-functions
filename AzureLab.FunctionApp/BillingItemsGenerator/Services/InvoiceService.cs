@@ -1,4 +1,5 @@
 ﻿using BillingItemsGenerator.Models;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,13 @@ namespace BillingItemsGenerator.Services
 {
     public interface IInvoiceService
     {
-        public Invoice Generate(ActiveList activeList);
+        public InvoiceGenerationRequest Generate(ActiveList activeList);
     }
     public class InvoiceService : IInvoiceService
     {
-        public Invoice Generate(ActiveList activeList)
+        public InvoiceGenerationRequest Generate(ActiveList activeList)
         {
-            return new Invoice
+            return new InvoiceGenerationRequest
             {
                 CustomerCode = activeList.CustomerCode,
                 Year = activeList.Year,

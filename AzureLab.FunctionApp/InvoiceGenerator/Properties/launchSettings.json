@@ -1,13 +1,13 @@
 {
   "profiles": {
-    "BillingItemsGenerator": {
+    "InvoiceGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "--port 7227"
+      "commandLineArgs": "--port 7130"
     },
     "Docker": {
       "commandName": "Docker",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "httpPort": 30052,
+      "httpPort": 30878,
       "useSSL": false
     }
   }

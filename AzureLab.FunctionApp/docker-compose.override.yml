@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  billingitemsgenerator:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+  invoicegenerator:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

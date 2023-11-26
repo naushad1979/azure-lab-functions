@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  billingitemsgenerator:
+    image: ${DOCKER_REGISTRY-}billingitemsgenerator
+    build:
+      context: .
+      dockerfile: BillingItemsGenerator/Dockerfile
+
+  invoicegenerator:
+    image: ${DOCKER_REGISTRY-}invoicegenerator
+    build:
+      context: .
+      dockerfile: InvoiceGenerator/Dockerfile
+

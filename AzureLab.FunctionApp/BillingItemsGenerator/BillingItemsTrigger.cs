@@ -3,6 +3,7 @@ using BillingItemsGenerator.Models;
 using BillingItemsGenerator.Services;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
+using Shared.Models;
 
 namespace BillingItemsGenerator
 {
@@ -27,7 +28,7 @@ namespace BillingItemsGenerator
         [FunctionName("BillingItemsBlobTrigger")]
         public void Run([BlobTrigger("active-list-container/{name}", Connection = "ActiveListStorage")] Stream activeListBlob, string name,
             [Table("billingItems")] ICollector<BillingItem> billingItems, 
-            [Queue("invoice-generation-request")] out Invoice invoiceRequest)
+            [Queue("invoice-generation-request")] out InvoiceGenerationRequest invoiceRequest)
         {
             _logger.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {activeListBlob.Length} Bytes");
 
